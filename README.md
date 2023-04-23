@@ -24,25 +24,25 @@ Week 9: Presenting our game to the teachers.
 
 ## Screens
 
-![mainmenu](screens\mainmenu.jpeg)
+![mainmenu](screens/mainmenu.jpeg)
 
 Start menu
 
 ![LevelSelect](screens/LevelSelect.png)
 Level select
 
-![optionsmenu](screens\optionsmenu.png)
+![optionsmenu](screens/optionsmenu.png)
 
 Options menu
 
-![beginningarea](screens\beginningarea.jpeg)
+![beginningarea](screens/beginningarea.jpeg)
 The first level
 
-![deathlands](screens\deathlands.jpeg)
+![deathlands](screens/deathlands.jpeg)
 The second level
 
-![deathlands](screens\deathlands.jpeg)
+![deathlands](screens/deathlands.jpeg)
 The third level
 
-![mountdoom](screens\mountdoom.jpeg)
+![mountdoom](screens/mountdoom.jpeg)
 The fourth level
