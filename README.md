@@ -28,7 +28,7 @@ Week 9: Presenting our game to the teachers.
 
 Start menu
 
-![LevelSelect](screens\LevelSelect.png)
+![LevelSelect](screens/LevelSelect.png)
 Level select
 
 ![optionsmenu](screens\optionsmenu.png)
