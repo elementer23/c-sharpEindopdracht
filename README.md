@@ -23,26 +23,26 @@ Week 8: Testing the full game and preparing a presentation.
 Week 9: Presenting our game to the teachers.
 
 ## Screens
+Below is a list of screens that will be in the game.
 
+## Start menu
 ![mainmenu](screens/mainmenu.jpeg)
 
-Start menu
-
+## Level select
 ![LevelSelect](screens/LevelSelect.png)
-Level select
 
+## Options menu
 ![optionsmenu](screens/optionsmenu.png)
 
-Options menu
-
+## The first level
 ![beginningarea](screens/beginningarea.jpeg)
-The first level
 
+## The second level
+![deathlands](screens/scorchedregions.jpeg)
+
+## The third level
 ![deathlands](screens/deathlands.jpeg)
-The second level
 
-![deathlands](screens/deathlands.jpeg)
-The third level
-
+## The fourth level
 ![mountdoom](screens/mountdoom.jpeg)
-The fourth level
+
