@@ -38,10 +38,10 @@ Below is a list of screens that will be in the game.
 ![beginningarea](screens/beginningarea.jpeg)
 
 ## The second level
-![scorchedregion](screens/scorchedregion.jpeg)
+![deathlands](screens/deathlands.jpeg)
 
 ## The third level
-![deathlands](screens/deathlands.jpeg)
+![scorchedregion](screens/scorchedregion.jpeg)
 
 ## The fourth level
 ![mountdoom](screens/mountdoom.jpeg)
