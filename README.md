@@ -1,3 +1,4 @@
+
 # Binding of Zelda
 
 Startdocument of **Victor Peters, Nick Buisman** and **Robin van Dijk**.
@@ -46,3 +47,34 @@ Below is a list of screens that will be in the game.
 ## The fourth level
 ![mountdoom](screens/mountdoom.jpeg)
 
+## Test cases:
+
+Player interactive cases:
+
+|Input| Expected result | Actual result |
+|--|--|--|
+| Input `w` | Player character moves forward | ... |
+| Input `a` | Player character moves left | ... |
+| Input `s` | Player character moves backwards | ... |
+| Input `d` | Player character moves right | ... |
+| Player walks against wall | Player walks into the wall | ... |
+| Input `spacebar` | Player shoots projectile | ... |
+| Player is hit with projectile | Player loses health | ... |
+| Player touches item | Item is picked up by player | ... |
+
+Level cases:
+
+| Input | Expected result | Actual result |
+|--|--|--|
+| Level is opened | User can see levels on a map | ... |
+| User switches between levels | Level selected is updated | ... |
+| User chooses level | Loading screen is shown | ... |
+| User is past loading screen | Level is loaded in | ... |
+
+Enemy cases:
+
+| Input | Expected result | Actual result |
+|--|--|--|
+| Enemy hits the player | Player takes damage | ... |
+| Enemy is hit | Enemy is despawned | ... | 
+| Enemy walks against wall | Enemy walks into wall | ... |
