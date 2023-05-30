@@ -23,7 +23,7 @@ namespace bindingofzelda
         {
             _hitbox = new Texture2D(_deviceManager.GraphicsDevice, width, height);
             _colors = new Color[width * height];
-            for (int i = 0; i < _colors.Length; i++) 
+            for (int i = 0; i < _colors.Length; i++)
             {
                 _colors[i] = Color.White;
             }

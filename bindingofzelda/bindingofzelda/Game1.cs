@@ -32,7 +32,7 @@ namespace bindingofzelda
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _player = Content.Load<Texture2D>("player/red");
-            _hitbox.LoadHitbox(88, 50);
+            _hitbox.LoadHitbox(100, 50);
             // TODO: use this.Content to load your game content here
         }
 
@@ -47,14 +47,14 @@ namespace bindingofzelda
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             KeyboardState keyboardState = Keyboard.GetState();
-            if (keyboardState.IsKeyDown(Keys.W)) 
+            if (keyboardState.IsKeyDown(Keys.W))
             {
                 _velocity.Y -= _speed;
             }
-            if (keyboardState.IsKeyDown(Keys.A)) 
-            { 
-                _velocity.X -= _speed; 
-            } 
+            if (keyboardState.IsKeyDown(Keys.A))
+            {
+                _velocity.X -= _speed;
+            }
             if (keyboardState.IsKeyDown(Keys.S))
             {
                 _velocity.Y += _speed;

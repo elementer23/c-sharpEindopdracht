@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bindingofzelda", "bindingofzelda\bindingofzelda.csproj", "{C8800941-841B-4461-B3CC-B2E5AAC5A017}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bindingofzelda", "bindingofzelda\bindingofzelda.csproj", "{CD71DFD0-CC2D-477D-9DF8-91AA9E3B9A72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8800941-841B-4461-B3CC-B2E5AAC5A017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8800941-841B-4461-B3CC-B2E5AAC5A017}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8800941-841B-4461-B3CC-B2E5AAC5A017}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8800941-841B-4461-B3CC-B2E5AAC5A017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD71DFD0-CC2D-477D-9DF8-91AA9E3B9A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD71DFD0-CC2D-477D-9DF8-91AA9E3B9A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD71DFD0-CC2D-477D-9DF8-91AA9E3B9A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD71DFD0-CC2D-477D-9DF8-91AA9E3B9A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D5DA9403-785E-470F-9406-5C3863F4C431}
+		SolutionGuid = {F11FBCD2-AC7B-4076-BAD1-CAD1DB0A5830}
 	EndGlobalSection
 EndGlobal
