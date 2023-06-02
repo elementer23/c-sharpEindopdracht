@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TheBindingOfZelda (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TheBindingOfZelda (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
