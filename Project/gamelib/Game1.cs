@@ -9,14 +9,6 @@ namespace gamelib
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        enum GameState
-        {
-            MainMenu,
-            GamePlay,
-            Credits,
-        }
-
-        private GameState _state;
 
         static public bool test = false;
 
@@ -46,22 +38,9 @@ namespace gamelib
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back==ButtonState.Pressed||Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            //void update(gametime deltatime)
-            //{
-            //    base.update(deltatime);
-            //    switch (_state)
-            //    {
-            //        case gamestate.mainmenu:
-            //            updatemainmenu(deltatime);
-            //            break;
-            //        case gamestate.gameplay:
-            //            updategameplay(deltatime);
-            //            break;
-            //        case gamestate.endofgame:
-            //            updateendofgame(deltatime);
-            //            break;
-            //    }
-            //}
+            // TODO: Add your update logic here
+
+            base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
