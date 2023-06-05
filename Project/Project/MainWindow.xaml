@@ -1,0 +1,39 @@
+﻿<Window
+    x:Class="Project.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:monoGameControls="clr-namespace:Project.MonoGameControls"
+    xmlns:local="clr-namespace:Project"
+    mc:Ignorable="d"
+    Title="Project"
+    WindowStartupLocation="CenterScreen"
+    Width="800"
+    Height="480">
+
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Settings">
+                <MenuItem Header="_Controls"/>
+                <MenuItem Header="_Graphics"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About Project" />
+            </MenuItem>
+        </Menu>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <monoGameControls:MonoGameContentControl Grid.Column="0" Grid.ColumnSpan="2" Width="NaN">
+                <monoGameControls:MonoGameContentControl.DataContext>
+                    <local:MainWindowViewModel />
+                </monoGameControls:MonoGameContentControl.DataContext>
+            </monoGameControls:MonoGameContentControl>
+        </Grid>
+    </DockPanel>
+</Window>
