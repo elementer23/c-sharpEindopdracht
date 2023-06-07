@@ -72,7 +72,6 @@ namespace TheBindingOfZelda
         void UpdateMainMenu(GameTime gameTime)
         {
             KeyboardState kstate = Keyboard.GetState();
-            // Respond to user input for menu selections, etc
             if (kstate.IsKeyDown(Keys.R))
             {
                 _state = GameState.GamePlay;
@@ -104,8 +103,15 @@ namespace TheBindingOfZelda
             }
             if (kstate.IsKeyDown(Keys.T))
             {
+                ResetLevel();
                 _state = GameState.EndOfGame;
             }
+        }
+
+        private void ResetLevel()
+        {
+            ballPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);
+            ballSpeed = 100f;
         }
 
         void UpdateEndOfGame(GameTime gameTime)
@@ -131,7 +137,6 @@ namespace TheBindingOfZelda
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
             _spriteBatch.Begin();
             _spriteBatch.Draw(
                 ballTexture,
