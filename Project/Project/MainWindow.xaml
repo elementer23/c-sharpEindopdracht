@@ -26,12 +26,11 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <monoGameControls:MonoGameContentControl Grid.Column="0" Grid.ColumnSpan="2" Width="NaN">
                 <monoGameControls:MonoGameContentControl.DataContext>
-                    <local:MainWindowViewModel />
+                    <local:Game1 />
                 </monoGameControls:MonoGameContentControl.DataContext>
             </monoGameControls:MonoGameContentControl>
         </Grid>
