@@ -11,7 +11,8 @@ namespace TheBindingOfZelda
         private SpriteBatch _spriteBatch;
 
         private Ball _ball;
-        private Ball _enemyBall;
+        Ball _enemyBall1;
+        Ball _enemyBall2;
 
         enum GameState
         {
@@ -33,7 +34,6 @@ namespace TheBindingOfZelda
         {
             // TODO: Add your initialization logic here
             _ball = new Ball(_graphics);
-            _enemyBall = new Ball(_graphics);
             base.Initialize();
         }
 
@@ -43,7 +43,15 @@ namespace TheBindingOfZelda
 
             // TODO: use this.Content to load your game content here
             _ball.SetTexture(Content.Load<Texture2D>("ball"));
-            _enemyBall.SetTexture(Content.Load<Texture2D>("ball"));
+            _enemyBall1 = new Ball(_graphics);
+            Vector2 vector21 = new Vector2(32f, 32f);
+            _enemyBall1.SetPosition(vector21);
+            _enemyBall1.SetTexture(Content.Load<Texture2D>("ball"));
+
+            _enemyBall2 = new Ball(_graphics);
+            Vector2 vector22 = new Vector2(32f, 96f);
+            _enemyBall2.SetPosition(vector22);
+            _enemyBall2.SetTexture(Content.Load<Texture2D>("ball"));
         }
 
         protected override void Update(GameTime gameTime)
@@ -133,12 +141,22 @@ namespace TheBindingOfZelda
                 0f
             );
             _spriteBatch.Draw(
-                _enemyBall.GetTexture(),
-                _enemyBall.GetPosition(),
+                _enemyBall1.GetTexture(),
+                _enemyBall1.GetPosition(),
                 null,
                 Color.White,
                 0f,
-                new Vector2(_enemyBall.GetTexture().Width / 2, _enemyBall.GetTexture().Height / 2),
+                new Vector2(_enemyBall1.GetTexture().Width / 2, _enemyBall1.GetTexture().Height / 2),
+                Vector2.One,
+                SpriteEffects.None,
+                0f);
+            _spriteBatch.Draw(
+                _enemyBall2.GetTexture(),
+                _enemyBall2.GetPosition(),
+                null,
+                Color.White,
+                0f,
+                new Vector2(_enemyBall2.GetTexture().Width / 2, _enemyBall2.GetTexture().Height / 2),
                 Vector2.One,
                 SpriteEffects.None,
                 0f);
