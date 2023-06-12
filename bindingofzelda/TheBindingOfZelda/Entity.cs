@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using bindingofzelda;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace TheBindingOfZelda
@@ -9,6 +10,7 @@ namespace TheBindingOfZelda
         Texture2D texture;
         Vector2 position;
         float speed;
+        private Hitbox _hitbox;
 
         private GraphicsDeviceManager graphics;
 
@@ -17,6 +19,7 @@ namespace TheBindingOfZelda
             this.graphics = graphics;
             position = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
             speed = 100f;
+            _hitbox = new Hitbox(graphics);
         }
 
         public void Update(GameTime gameTime)
@@ -76,6 +79,16 @@ namespace TheBindingOfZelda
         public void SetSpeed(float value)
         {
             speed = value;
+        }
+
+        /*public void SetHitbox(int width, int height)
+        {
+            _hitbox.LoadHitbox(width, height);
+        }*/
+
+        public Hitbox GetHitbox()
+        {
+            return _hitbox;
         }
     }
 }
