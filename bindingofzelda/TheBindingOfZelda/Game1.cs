@@ -71,7 +71,7 @@ namespace TheBindingOfZelda
                     UpdateMainMenu(gameTime);
                     break;
                 case GameState.GamePlay:
-                    UpdateGameplay(gameTime);
+                    UpdateGameplay(gameTime, _graphics);
                     break;
                 case GameState.EndOfGame:
                     UpdateEndOfGame(gameTime);
@@ -88,12 +88,12 @@ namespace TheBindingOfZelda
             }
         }
 
-        void UpdateGameplay(GameTime gameTime)
+        void UpdateGameplay(GameTime gameTime, GraphicsDeviceManager graphics)
         {
             KeyboardState kstate = Keyboard.GetState();
             MouseState mstate = Mouse.GetState();
 
-            _ball.Update(gameTime);
+            _ball.Update(gameTime, graphics);
 
             
             if (kstate.IsKeyDown(Keys.T))

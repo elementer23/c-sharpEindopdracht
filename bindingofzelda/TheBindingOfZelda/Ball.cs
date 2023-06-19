@@ -14,7 +14,7 @@ namespace TheBindingOfZelda
             SetSpeed(120f);
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, GraphicsDeviceManager graphics)
         {
             base.Update(gameTime);
             KeyboardState kstate = Keyboard.GetState();
@@ -23,7 +23,7 @@ namespace TheBindingOfZelda
                 SetAxis("y", GetAxis("y") - GetSpeed() * (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
 
-            if (kstate.IsKeyDown(Keys.Down) && GetAxis("y") < 480)
+            if (kstate.IsKeyDown(Keys.Down) && GetAxis("y") < graphics.PreferredBackBufferHeight)
             {
                 SetAxis("y", GetAxis("y") + GetSpeed() * (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
@@ -33,7 +33,7 @@ namespace TheBindingOfZelda
                 SetAxis("x", GetAxis("x") - GetSpeed() * (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
 
-            if (kstate.IsKeyDown(Keys.Right) && GetAxis("x") < 800)
+            if (kstate.IsKeyDown(Keys.Right) && GetAxis("x") < graphics.PreferredBackBufferWidth)
             {
                 SetAxis("x", GetAxis("x") + GetSpeed() * (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
