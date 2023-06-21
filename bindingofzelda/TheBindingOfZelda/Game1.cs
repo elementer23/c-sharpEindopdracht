@@ -43,18 +43,18 @@ namespace TheBindingOfZelda
 
             // TODO: use this.Content to load your game content here
             _ball.SetTexture(Content.Load<Texture2D>("ball"));
-            _ball.GetHitbox().LoadHitbox(50, 50);
+            _ball.GetHitbox().LoadHitbox(64, 64);
             _enemyBall1 = new Ball(_graphics);
             Vector2 vector21 = new Vector2(32f, 32f);
             _enemyBall1.SetPosition(vector21);
             _enemyBall1.SetTexture(Content.Load<Texture2D>("ball"));
-            _enemyBall1.GetHitbox().LoadHitbox(100, 50);
+            _enemyBall1.GetHitbox().LoadHitbox(64, 64);
 
             _enemyBall2 = new Ball(_graphics);
             Vector2 vector22 = new Vector2(32f, 96f);
             _enemyBall2.SetPosition(vector22);
             _enemyBall2.SetTexture(Content.Load<Texture2D>("ball"));
-            _enemyBall2.GetHitbox().LoadHitbox(100, 50);
+            _enemyBall2.GetHitbox().LoadHitbox(64, 64);
         }
 
         protected override void Update(GameTime gameTime)
@@ -132,7 +132,7 @@ namespace TheBindingOfZelda
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             _spriteBatch.Begin();
-            _ball.GetHitbox().Draw(_spriteBatch, _ball.GetPosition());
+            _ball.GetHitbox().Draw(_spriteBatch, new Vector2(_ball.GetPosition().X - (_ball.GetTexture().Width / 2), _ball.GetPosition().Y - (_ball.GetTexture().Height / 2)));
             _spriteBatch.Draw(
                 _ball.GetTexture(),
                 _ball.GetPosition(),
@@ -144,7 +144,7 @@ namespace TheBindingOfZelda
                 SpriteEffects.None,
                 0f
             );
-            _enemyBall1.GetHitbox().Draw(_spriteBatch, _enemyBall1.GetPosition());
+            _enemyBall1.GetHitbox().Draw(_spriteBatch, new Vector2(_enemyBall1.GetPosition().X - (_enemyBall1.GetTexture().Width / 2), _enemyBall1.GetPosition().Y - (_enemyBall1.GetTexture().Height / 2)));
             _spriteBatch.Draw(
                 _enemyBall1.GetTexture(),
                 _enemyBall1.GetPosition(),
@@ -155,7 +155,7 @@ namespace TheBindingOfZelda
                 Vector2.One,
                 SpriteEffects.None,
                 0f);
-            _enemyBall2.GetHitbox().Draw(_spriteBatch, _enemyBall2.GetPosition());
+            _enemyBall2.GetHitbox().Draw(_spriteBatch, new Vector2(_enemyBall2.GetPosition().X - (_enemyBall2.GetTexture().Width / 2), _enemyBall2.GetPosition().Y - (_enemyBall2.GetTexture().Height / 2)));
             _spriteBatch.Draw(
                 _enemyBall2.GetTexture(),
                 _enemyBall2.GetPosition(),
