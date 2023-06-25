@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace TheBindingOfZelda
 {
@@ -10,7 +11,7 @@ namespace TheBindingOfZelda
         public int width;
         public int height;
 
-        public Ball(GraphicsDeviceManager graphics) : base(graphics)
+        public Ball(Texture2D texture, Vector2 position, GraphicsDeviceManager graphics) : base(texture, position, graphics)
         {
             playerRect = new Rectangle((int)GetPosition().X, (int)GetPosition().Y, 16, 16);
             SetSpeed(120f);
@@ -39,6 +40,9 @@ namespace TheBindingOfZelda
             {
                 SetAxis("x", GetAxis("x") + GetSpeed() * (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
+
+            var toMouse = Input.MousePosition - Position;
+            Rotation = (float)Math.Atan2(toMouse.Y, toMouse.X);
             
             playerRect.X = (int)GetPosition().X;
         }

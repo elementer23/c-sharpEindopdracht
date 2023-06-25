@@ -7,17 +7,21 @@ namespace TheBindingOfZelda
 
     public abstract class Entity
     {
-        Texture2D texture;
-        Vector2 position;
-        float speed;
+        protected readonly Texture2D texture;
+        public Vector2 Position;
+        protected readonly Vector2 originalposition;
+        public float speed { get; set; }
+        public float Rotation { get; set; }
         private Hitbox _hitbox;
 
         private GraphicsDeviceManager graphics;
 
-        public Entity(GraphicsDeviceManager graphics)
+        public Entity(Texture2D texture, Vector2 position, GraphicsDeviceManager graphics)
         {
+            this.texture = texture;
             this.graphics = graphics;
-            position = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
+            Position = position;
+            originalposition = new Vector2(texture.Width / 2, texture.Height / 2);  
             speed = 100f;
             _hitbox = new Hitbox(graphics);
         }
@@ -29,7 +33,7 @@ namespace TheBindingOfZelda
 
         public void reset()
         {
-            position = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
+            Position = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
             speed = 100f;
         }
         public Texture2D GetTexture()
@@ -37,38 +41,33 @@ namespace TheBindingOfZelda
             return texture;
         }
 
-        public void SetTexture(Texture2D value)
-        {
-            texture = value;
-        }
-
         public float GetAxis(string axis)
         {
-            if(axis == "x") return position.X;
-            return position.Y;
+            if(axis == "x") return Position.X;
+            return Position.Y;
         }
 
         public void SetAxis(string axis, float value)
         {
             if (axis == "x")
             {
-                position.X = value;
+                Position.X = value;
             }
 
             if (axis == "y")
             {
-                position.Y = value;
+                Position.Y = value;
             }
         }
 
         public Vector2 GetPosition()
         { 
-            return position;
+            return Position;
         }
 
         public void SetPosition(Vector2 value) 
         { 
-            position = value;
+            Position = value;
         }
 
         public float GetSpeed()
@@ -89,6 +88,11 @@ namespace TheBindingOfZelda
         public Hitbox GetHitbox()
         {
             return _hitbox;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(texture, Position, null, Color.White, Rotation, originalposition, 1, SpriteEffects.None, 1);
         }
     }
 }
